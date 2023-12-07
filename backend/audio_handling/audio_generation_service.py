@@ -1,6 +1,6 @@
 import boto3
 
-polly_client = boto3.client('polly')
+polly_client = boto3.client('polly', region_name="us-east-1")
 
 
 def convert_text_to_audio(text_content: str):

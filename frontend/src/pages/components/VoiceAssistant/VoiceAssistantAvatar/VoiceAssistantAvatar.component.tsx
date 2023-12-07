@@ -1,8 +1,22 @@
+import styles from "@/styles/VoiceAssistant.module.css";
+import useVoiceAssistantAvatar, {
+  CANVAS_ORB_ID,
+  UseVoiceAssistantAvatarProps,
+} from "./useVoiceAssistantAvatar";
+import AudioBarsVisualizer from "./AudioBarsVisualizer/AudioBarsVisualizer";
 
+const VoiceAssistantAvatar = (props: UseVoiceAssistantAvatarProps) => {
+  const { audioFileUrl } = props;
+  useVoiceAssistantAvatar(props);
+  return (
+    <div className={styles["voice-assistant-avatar-wrapper"]}>
+      <canvas
+        id={CANVAS_ORB_ID}
+        className={styles["voice-assistant-avatar-canvas"]}
+      />
+      <AudioBarsVisualizer audioFileUrl={audioFileUrl} />
+    </div>
+  );
+};
 
-const VoiceAssistantAvatar = ()=>{
-    return <img src="https://i.imgur.com/oDFIFc6.png"/>
-}
-
-
-export default VoiceAssistantAvatar
+export default VoiceAssistantAvatar;
