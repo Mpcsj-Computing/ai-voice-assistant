@@ -17,14 +17,14 @@ interface OrbControls {
 }
 
 const AUDIO_PLAYING_STATE: OrbControls = {
-  rotationSpeed: 0.4,
+  rotationSpeed: 0.3,
   sphereSizeScale: 155,
   layersCount: 3,
   depthOuterLayer: 2,
 };
 
 const AUDIO_WAITING_STATE: OrbControls = {
-  rotationSpeed: 1.2,
+  rotationSpeed: 0.8,
   sphereSizeScale: 155,
   layersCount: 3,
   depthOuterLayer: 2,

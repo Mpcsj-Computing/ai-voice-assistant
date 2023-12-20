@@ -16,7 +16,7 @@ def __get_transcoded_audio_file_path(data: bytes) -> str:
     return local_output_file_path
 
 
-async def handle_audio_from_user(file: bytes) -> str:
+async def handle_audio_from_user(file: bytes, user_id: str) -> str:
     """
         Entrypoint
     :param file:
@@ -26,7 +26,7 @@ async def handle_audio_from_user(file: bytes) -> str:
     transcoded_user_audio_file_path = __get_transcoded_audio_file_path(file)
     transcript_content_text = convert_audio_to_text(transcoded_user_audio_file_path)
     text_content = transcript_content_text['text']
-    ai_text_reply = handle_get_response_for_user(text_content)
+    ai_text_reply = handle_get_response_for_user(text_content, user_id)
     generated_audio_ai = convert_text_to_audio(ai_text_reply)
     output_audio_local_file_path = persist_binary_file_locally(
         data=generated_audio_ai['AudioStream'].read(),
