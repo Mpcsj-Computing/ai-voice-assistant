@@ -2,7 +2,7 @@ import styles from "@/styles/VoiceAssistant.module.css";
 import useVoiceAssistantAvatar, {
   CANVAS_ORB_ID,
   UseVoiceAssistantAvatarProps,
-} from "./useVoiceAssistantAvatar";
+} from "../../../../hooks/VoiceAssistant/VoiceAssistantAvatar/useVoiceAssistantAvatar";
 import AudioBarsVisualizer from "./AudioBarsVisualizer/AudioBarsVisualizer";
 
 const VoiceAssistantAvatar = (props: UseVoiceAssistantAvatarProps) => {

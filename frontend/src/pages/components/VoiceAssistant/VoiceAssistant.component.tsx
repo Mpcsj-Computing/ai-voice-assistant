@@ -1,7 +1,7 @@
 import VoiceAssistantAvatar from "./VoiceAssistantAvatar/VoiceAssistantAvatar.component";
 import VoiceRecorder from "../VoiceRecorder/VoiceRecorder.component";
 import styles from "@/styles/VoiceAssistant.module.css";
-import useVoiceAssistant from "./useVoiceAssistant.hook";
+import useVoiceAssistant from "../../../hooks/VoiceAssistant/useVoiceAssistant.hook";
 import ReactLoading from "react-loading";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.component";
 

@@ -2,7 +2,7 @@ import styles from "@/styles/VoiceAssistant.module.css";
 import useAudioBarsVisualizer, {
   AUDIO_BARS_CANVAS_ID,
   UseAudioBarsVisualizerProps,
-} from "./useAudioBarsVisualizer";
+} from "../../../../../hooks/VoiceAssistant/AudioBarsVisualizer/useAudioBarsVisualizer";
 
 const AudioBarsVisualizer = (props: UseAudioBarsVisualizerProps) => {
   const { audioFileUrl } = props;

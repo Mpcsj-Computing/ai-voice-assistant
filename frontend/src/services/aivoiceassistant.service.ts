@@ -1,3 +1,5 @@
+import { BACKEND_URL } from "../configuration";
+
 export const getAIReplyOutput = async (userAudioData: Blob, userId: string) => {
   const audioFile = new File([userAudioData], "userVoiceInput", {
     type: "audio/mpeg",
@@ -10,11 +12,11 @@ export const getAIReplyOutput = async (userAudioData: Blob, userId: string) => {
     method: "POST",
     body: formData,
   };
+
   try {
-    const result = await fetch(
-      "http://localhost:8000/voice-assistant/audio-message",
-      requestOptions
-    );
+    const url = `${BACKEND_URL}/api/voice-assistant/audio-message`;
+    console.log("url>>", url);
+    const result = await fetch(url, requestOptions);
 
     return await result.blob();
   } catch (error) {
