@@ -12,13 +12,6 @@ RUN apt-get update && \
 # Install aws cli
 RUN apt-get install -y awscli
 
-# Setup AWS Credentials
-
-# Set AWS credentials as environment variables
-#ENV AWS_ACCESS_KEY_ID=AKIAQP7CVG6AL2UQZTWG
-#ENV AWS_SECRET_ACCESS_KEY=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
-#ENV AWS_DEFAULT_REGION=us-east-1
-
 
 # Copy the current directory contents into the container at /app
 COPY . /app
