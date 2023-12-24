@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install --production
+RUN npm install
 
 # Copy only necessary files for building
 COPY . .
