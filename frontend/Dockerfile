@@ -27,6 +27,9 @@ COPY --from=build-stage /usr/src/app/.next ./.next
 COPY --from=build-stage /usr/src/app/public ./public
 COPY --from=build-stage /usr/src/app/package*.json ./
 
+# Install package.json dependencies as well
+RUN npm install
+
 # Expose the port that Next.js will run on
 EXPOSE 3000
 
