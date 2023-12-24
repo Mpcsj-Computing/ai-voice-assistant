@@ -7,6 +7,12 @@ setup_app_config()
 
 app = FastAPI()
 
+
+@app.get("/")
+def root_route():
+    return {"Hello": "Self-Perfecter"}
+
+
 origins = [
     "http://localhost",
     "http://localhost:3000",
