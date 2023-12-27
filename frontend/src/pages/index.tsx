@@ -1,8 +1,10 @@
-import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
-import VoiceAssistant from './components/VoiceAssistant/VoiceAssistant.component'
+import Head from "next/head";
+import styles from "@/styles/Home.module.css";
+import VoiceAssistant from "./components/VoiceAssistant/VoiceAssistant.component";
+import useApp, { HomeProps } from "@/hooks/useApp";
 
-export default function Home() {
+function Home(props: HomeProps) {
+  useApp(props);
   return (
     <>
       <Head>
@@ -12,8 +14,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-          <VoiceAssistant/>
+        <VoiceAssistant />
       </main>
     </>
-  )
+  );
 }
+export async function getServerSideProps() {
+  // Access the environment variable
+  const backendUrl = process.env.BACKEND_URL;
+
+  // Pass the environment variable as a prop
+  return {
+    props: {
+      backendUrl,
+    },
+  };
+}
+
+export default Home;

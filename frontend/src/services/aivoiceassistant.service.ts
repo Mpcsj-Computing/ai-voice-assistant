@@ -1,4 +1,4 @@
-import { BACKEND_URL } from "../configuration";
+import { APP_CONFIG } from "../configuration";
 
 export const getAIReplyOutput = async (userAudioData: Blob, userId: string) => {
   const audioFile = new File([userAudioData], "userVoiceInput", {
@@ -14,7 +14,7 @@ export const getAIReplyOutput = async (userAudioData: Blob, userId: string) => {
   };
 
   try {
-    const url = `${BACKEND_URL}/api/voice-assistant/audio-message`;
+    const url = `${APP_CONFIG.BACKEND_URL}/api/voice-assistant/audio-message`;
     console.log("url>>", url);
     const result = await fetch(url, requestOptions);
 
