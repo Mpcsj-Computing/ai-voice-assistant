@@ -10,8 +10,5 @@ async def handle_receive_audio_data(file: UploadFile, userId: str = Form(...)):
     print('file_data >> ', file)
     print('userId >>', userId)
     file_data = await file.read()
-    generated_ai_audio_file_path = await handle_audio_from_user(file_data,user_id=userId)
+    generated_ai_audio_file_path = await handle_audio_from_user(file_data, user_id=userId)
     return FileResponse(generated_ai_audio_file_path, media_type='audio/mpeg', filename='ai_output')
-
-#docker run --name MyContainer -p 8080:80 MyImage
-# docker run --name testBackend -p 8000:8000 ai-voice-assistant-backend-v2
