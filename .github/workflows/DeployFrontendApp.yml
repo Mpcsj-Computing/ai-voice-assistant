@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check env vars
+        run: echo "AWS_DEFAULT_REGION>>$AWS_DEFAULT_REGION";
       - name: Checkout repository
         uses: actions/checkout@v2
 
