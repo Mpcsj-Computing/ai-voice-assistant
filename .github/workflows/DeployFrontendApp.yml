@@ -3,7 +3,7 @@ name: Build and Deploy FrontendApp to ECS
 on:
   push:
     branches:
-      - main
+      - feat/prep-video-cicd
 
 env:
   # Setting an environment variable with the value of a configuration variable
@@ -55,7 +55,7 @@ jobs:
       - name: Deploy to ECS
         uses: imehedi/actions-awscli-v2@latest
         with:
-          args: ecs update-service --cluster $ECS_CLUSTER --service $ECS_FRONTEND_SERVICE --force-new-deployment
+          args: ecs update-service --cluster AiVoiceAssistantCluster --service AiVoiceAssistantFrontend --force-new-deployment
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

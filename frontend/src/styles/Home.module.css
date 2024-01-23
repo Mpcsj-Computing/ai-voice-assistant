@@ -8,7 +8,7 @@
   background: radial-gradient(
     circle,
     rgba(83, 184, 249, 1) 0%,
-    rgba(219, 166, 84, 1) 100%
+    rgb(84, 113, 219) 100%
   );
 }
 
@@ -102,7 +102,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -130,7 +130,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
