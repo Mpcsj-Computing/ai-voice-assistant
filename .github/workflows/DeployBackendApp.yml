@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - "backend/**"
-      - ".github/**"
     branches:
       - feat/prep-video-cicd
 

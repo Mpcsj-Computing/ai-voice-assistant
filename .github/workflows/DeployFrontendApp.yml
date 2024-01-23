@@ -2,6 +2,8 @@ name: Build and Deploy FrontendApp to ECS
 
 on:
   push:
+    paths:
+      - "frontend/**"
     branches:
       - feat/prep-video-cicd
 
