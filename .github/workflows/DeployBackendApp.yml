@@ -57,7 +57,7 @@ jobs:
       - name: Deploy to ECS
         uses: imehedi/actions-awscli-v2@latest
         with:
-          args: ecs update-service --cluster $ECS_CLUSTER --service $ECS_BACKEND_SERVICE --force-new-deployment
+          args: ecs update-service --cluster AiVoiceAssistantCluster --service AiVoiceAssistantBackend --force-new-deployment
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
