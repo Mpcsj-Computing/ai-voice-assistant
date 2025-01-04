@@ -62,8 +62,21 @@ def convert_text_to_audio(text_content: str, voice_id="pNInz6obpgDQGcFmaJgB"):
     return output_file_path
 
 
+def get_account_info():
+    url = "https://api.elevenlabs.io/v1/user"
+    headers = {
+        "Accept": "audio/mpeg",
+        "Content-Type": "application/json",
+        "xi-api-key": get_api_key()
+    }
+    response = requests.request("GET", url, headers=headers)
+
+    print(response.text)
+
+
 if __name__ == "__main__":
     from project_config import setup_app_config
 
     setup_app_config()
-    get_all_voice_ids()
+    # get_all_voice_ids()
+    get_account_info()

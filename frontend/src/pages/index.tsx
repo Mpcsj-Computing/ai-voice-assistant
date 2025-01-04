@@ -21,7 +21,7 @@ function Home(props: HomeProps) {
 }
 export async function getServerSideProps() {
   // Access the environment variable
-  const backendUrl = process.env.BACKEND_URL;
+  const backendUrl = "http://localhost:8000";
 
   // Pass the environment variable as a prop
   return {

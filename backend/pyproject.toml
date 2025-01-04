@@ -14,6 +14,9 @@ uvicorn = {extras = ["standard"], version = "^0.22.0"}
 boto3 = "^1.26.126"
 python-dotenv = "^1.0.0"
 python-multipart = "^0.0.6"
+anthropic = "^0.42.0"
+pandas = "1.5.3"
+openpyxl = ">=3.0,<4.0"
 
 
 [build-system]
