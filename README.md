@@ -4,6 +4,7 @@
   <a href="https://www.youtube.com/watch?v=_n9OS_pbobg&list=PLEm9sJnRaMuY35YUqXmE5ckALb3dc4HQ-" target="blank"><img src="https://res.cloudinary.com/https-mpcsj-com/image/upload/v1685210551/Thumbnail2_zqnbo3.jpg" width="320" alt="Project logo" /></a>
 </p>
 
+Hi, if this project helped you somehow, you can [buy me a coffee!](https://buymeacoffee.com/mpcsj)
 ## Repository Structure
 
 - [backend/](backend) - Backend code made using Python and FastAPI
